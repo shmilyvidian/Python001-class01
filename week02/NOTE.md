@@ -29,9 +29,20 @@
         - 创建连接 -》创建connection -》获取cursor -》CRUD -》关闭cursor -》关闭connection-》结束
     - show databases;
     - create database test;
+### 反爬虫
+    - ref
+    - 
+    - 
+    - 
+    - 
 ### 模拟浏览器行为
     - useragent
         - from fake_useragent import UserAgent
     - cookie
     - webdrive
         - http://chromedriver.storage.googleapis.com/index.html
+    - 分块下载
+        - r = requests.get(file_url, stream=True)
+          for chunk in r.iter_content(chunk_size=1024)
+    - 验证码识别
+        

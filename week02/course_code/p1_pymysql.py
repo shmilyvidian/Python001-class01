@@ -38,7 +38,8 @@ class ConnDB(object):
                 result.append(cur.fetchone())
             cur.close()
             conn.commit()
-        except:
+        except Exception as e:
+            print(e)
             conn.rollback()
         conn.close()
 
