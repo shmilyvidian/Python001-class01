@@ -6,7 +6,6 @@
 
 # useful for handling different item types with a single interface
 # from itemadapter import ItemAdapter
-import pandas as pd
 
 
 import pymysql
@@ -31,12 +30,15 @@ class MaoyanmoviePipeline:
             port=dbInfo['port'],
             user=dbInfo['user'],
             password=dbInfo['password'],
-            db=dbInfo['db']
+            db=dbInfo['db'],
+            charset="utf8mb4"
         )
 
         cur = conn.cursor()
         try:
             values = [movie_name, movie_type, movie_time]
+            count = cur.execute('select * from movie')
+            print(f'count={count}')
             cur.execute('INSERT INTO  movie values(%s,%s,%s)', values)
             # 关闭游标
             cur.close()

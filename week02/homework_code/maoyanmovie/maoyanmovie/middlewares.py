@@ -103,13 +103,14 @@ class MaoyanmovieDownloaderMiddleware:
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
 
-class RandomHttpProxyMiddleware(MaoyanmovieSpiderMiddleware):
+
+class RandomHttpProxyMiddleware(object):
     def __init__(self, ip):
         self.ip = ip
 
     @classmethod
     def from_crawler(cls, crawler):
-        return cls(ip=crawler.settings.get('PROXIES'))
+        return cls(ip=crawler.settings.get('HTTP_PROXY_LIST'))
 
     def process_request(self, request, spider):
         ip = random.choice(self.ip)
