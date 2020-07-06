@@ -16,9 +16,9 @@ def run():
         btm1.click()
         # 填充账户和密码
         browser.find_element_by_xpath(
-            '//*[@name="mobileOrEmail"]').send_keys('xxxx')
+            '//*[@name="mobileOrEmail"]').send_keys('shmilyvidian@163.com')
         browser.find_element_by_xpath(
-            '//*[@name="password"]').send_keys('xxxx')
+            '//*[@name="password"]').send_keys('lsf19941026@!')
         time.sleep(1)
 
         # 登录
