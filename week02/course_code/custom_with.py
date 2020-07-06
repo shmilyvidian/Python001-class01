@@ -5,7 +5,7 @@ class Open:
     def __exit__(self, type, value, trace):
         print('close')
 
-    def __call__():
+    def __call__(self):
         pass
 
 
