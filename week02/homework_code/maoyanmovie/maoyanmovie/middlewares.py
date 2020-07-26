@@ -103,7 +103,6 @@ class MaoyanmovieDownloaderMiddleware:
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
 
-
 class RandomHttpProxyMiddleware(object):
     def __init__(self, ip):
         self.ip = ip

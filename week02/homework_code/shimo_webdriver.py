@@ -17,7 +17,7 @@ def run():
         # 填充账户和密码
         browser.find_element_by_xpath(
             '//*[@name="mobileOrEmail"]').send_keys('xxx')
-        browser.find_element_by_xpath(
+        browser.find_element_by_xpath
             '//*[@name="password"]').send_keys('xxx')
         time.sleep(1)
 
@@ -26,9 +26,6 @@ def run():
 
     except Exception as e:
         print(e)
-    finally:
-        browser.close()
-
 
 if __name__ == '__main__':
     run()
